@@ -4,6 +4,9 @@ module.exports = {
     browser: true,
     node: true
   },
+  parserOptions: {
+    parser: '@typescript-eslint/parser'
+  },
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'prettier',
@@ -11,11 +14,13 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended'
   ],
-  plugins: ['prettier'],
+  plugins: ['@typescript-eslint', 'prettier'],
   // add your custom rules here
   rules: {
     'nuxt/no-cjs-in-config': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    'no-unused-vars': 'off'
+    'no-unused-vars': 'off',
+    camelcase: 'off',
+    'import/order': 'off'
   }
 }

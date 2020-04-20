@@ -10,13 +10,14 @@
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
+    "noImplicitAny": false,
     "baseUrl": ".",
+    "resolveJsonModule": true, // Only use when import data file
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"],
-      "@components/*": ["./components/*"]
+      "@/*": ["./*"]
     },
     "types": ["@types/node", "@nuxt/types"]
   },
+  "include": ["/**/*"],
   "exclude": ["node_modules", ".nuxt", "dist"]
 }

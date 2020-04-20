@@ -1,6 +1,9 @@
 import { Configuration } from '@nuxt/types'
-import { Configuration as WebpackConfiguration } from 'webpack'
+// import { Configuration as WebpackConfiguration } from 'webpack'
 
+const colors = require('vuetify/es5/util/colors').default
+
+// module.exports
 const config: Configuration = {
   mode: 'universal',
   /*
@@ -39,11 +42,12 @@ const config: Configuration = {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    ['@nuxtjs/vuetify', { treeShake: true }]
   ],
   tailwindcss: {
-    configPath: '~/config/tailwind.config.js',
-    cssPath: '~/assets/css/tailwind.css',
+    configPath: '@/config/tailwind.config.js',
+    cssPath: '@/assets/css/tailwind.css',
     purgeCSSInDev: false,
     exposeConfig: false
   },
@@ -73,13 +77,42 @@ const config: Configuration = {
    */
   axios: {},
   /*
+   ** vuetify module configuration
+   ** https://github.com/nuxt-community/vuetify-module
+   */
+  vuetify: {
+    // customVariables: ['~/assets/variables.scss'],
+    theme: {
+      dark: true,
+      themes: {
+        dark: {
+          primary: colors.blue.darken2,
+          accent: colors.grey.darken3,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        }
+      }
+    }
+  },
+  /*
    ** Build configuration
    */
   build: {
     /*
      ** You can extend webpack config here
      */
-    extend(config: WebpackConfiguration, _) {}
+    analyze: true,
+    extractCSS: true,
+    extend(config, _) {},
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-decorators', { legacy: true }],
+        ['@babel/plugin-proposal-class-properties', { loose: true }]
+      ]
+    }
   },
   typescript: {
     typeCheck: true,
