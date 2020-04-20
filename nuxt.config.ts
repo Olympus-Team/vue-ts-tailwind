@@ -1,4 +1,7 @@
-module.exports = {
+import { Configuration } from '@nuxt/types'
+import { Configuration as WebpackConfiguration } from 'webpack'
+
+const config: Configuration = {
   mode: 'universal',
   /*
    ** Headers of the page
@@ -38,6 +41,22 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss'
   ],
+  tailwindcss: {
+    configPath: '~/config/tailwind.config.js',
+    cssPath: '~/assets/css/tailwind.css',
+    purgeCSSInDev: false,
+    exposeConfig: false
+  },
+  purgeCSS: {
+    content: [
+      './pages/**/*.vue',
+      './layouts/**/*.vue',
+      './components/**/*.vue',
+      './node_modules/vuetify/dist/vuetify.js'
+    ],
+    whitelist: ['html', 'body', 'nuxt-progress', 'DataCard'],
+    whitelistPatterns: [/(col|row)/]
+  },
   /*
    ** Nuxt.js modules
    */
@@ -60,6 +79,12 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config: WebpackConfiguration, _) {}
+  },
+  typescript: {
+    typeCheck: true,
+    ignoreNotFoundWarnings: true
   }
 }
+
+export default config

@@ -28,8 +28,10 @@
     "compression": "^1.7.4",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
-    "nuxt-property-decorator": "^2.5.1"
+    "nuxt-property-decorator": "^2.5.1",
+    "sass-loader": "^8.0.2"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
@@ -37,6 +39,7 @@
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.1.0",
     "@nuxtjs/tailwindcss": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.11.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
@@ -49,7 +52,10 @@
     "lint-staged": "^10.0.0",
     "nodemon": "^1.18.9",
     "prettier": "^1.19.1",
-    "stylelint": "^10.1.0",
+    "stylelint": "^13.3.2",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.17.0",
     "ts-jest": "^25.0.0",
     "vue-jest": "^4.0.0-0"
   }
