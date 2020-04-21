@@ -62,7 +62,7 @@
     "stylelint": "13.3.2",
     "stylelint-config-prettier": "8.0.1",
     "stylelint-config-standard": "20.0.0",
-    "stylelint-scss": "3.17.0",
+    "stylelint-scss": "3.17.1",
     "ts-jest": "25.4.0",
     "vue-jest": "4.0.0-beta.2",
     "yorkie": "2.0.0"
