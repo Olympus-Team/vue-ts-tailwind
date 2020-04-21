@@ -1,9 +1,8 @@
 import { Configuration } from '@nuxt/types'
-// import { Configuration as WebpackConfiguration } from 'webpack'
+import { Configuration as WebpackConfiguration } from 'webpack'
 
 const colors = require('vuetify/es5/util/colors').default
 
-// module.exports
 const config: Configuration = {
   mode: 'universal',
   /*
@@ -81,7 +80,6 @@ const config: Configuration = {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    // customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
       themes: {
@@ -104,9 +102,9 @@ const config: Configuration = {
     /*
      ** You can extend webpack config here
      */
-    analyze: true,
     extractCSS: true,
-    extend(config, _) {},
+    extend(config: WebpackConfiguration, ctx) {},
+    // Config for Nuxt Property Decorator
     babel: {
       plugins: [
         ['@babel/plugin-proposal-decorators', { legacy: true }],
