@@ -21,6 +21,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     'no-unused-vars': 'off',
     camelcase: 'off',
-    'import/order': 'off'
+    'import/order': 'off',
+    'no-console': 'off'
   }
 }
