@@ -12,9 +12,12 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest"
   },
+  "engines": {
+    "node": ">=10.19.0"
+  },
   "lint-staged": {
-    "*.{js,vue}": "yarn lint",
-    "*.{css,vue}": "stylelint"
+    "*.{js,ts,css,vue}": "yarn lint",
+    "*.{css,scss,vue}": "stylelint"
   },
   "husky": {
     "hooks": {
