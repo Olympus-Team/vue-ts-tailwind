@@ -1,0 +1,24 @@
+ls:
+  /{components,layouts,middleware,pages,plugins,server,store,types}/*:
+    .js: camelCase
+    .ts: camelCase
+    .vue: camelCase | PascalCase
+    .d.ts: camelCase
+    .spec.ts: camelCase | PascalCase
+    .mock.ts: camelCase
+# ignore:
+#   - node_modules
+#   - .git
+#   - .circleci
+#   - .github
+#   - .vscode
+#   - .nuxt
+#   - dist
+#   - .eslintrc.js
+#   - config/tailwind.config.js
+#   - jest.config.js
+#   - stylelint.config.js
+#   - lint-staged.config.js
+#   - nuxt.config.js
+#   - shims-tsx.d.ts
+#   - shims-vue.d.ts
