@@ -1,5 +1,7 @@
 # vue-ts-tailwind
 
+Chỉ là project nho nhỏ cho zui
+
 > Testing project
 
 ## Build Setup
