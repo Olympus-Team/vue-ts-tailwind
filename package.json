@@ -39,7 +39,7 @@
     "@nuxtjs/eslint-config-typescript": "1.0.2",
     "@nuxtjs/eslint-module": "1.1.0",
     "@nuxtjs/stylelint-module": "3.2.2",
-    "@nuxtjs/tailwindcss": "1.4.0",
+    "@nuxtjs/tailwindcss": "1.4.1",
     "@nuxtjs/vuetify": "1.11.0",
     "@types/compression": "1.7.0",
     "@typescript-eslint/eslint-plugin": "2.29.0",
