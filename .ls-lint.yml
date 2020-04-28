@@ -1,8 +1,24 @@
 ls:
-  /{components,layouts,middleware,pages,plugins,server,store,types}/*:
+  scripts:
+    .js: camelCase
+  components/**:
+    .vue: camelCase | PascalCase
+  pages/**:
+    .vue: camelCase | PascalCase
+  layout/**:
+    .vue: camelCase | PascalCase
+  middleware/**:
+    .ts: camelCase
+  plugins/**:
     .js: camelCase
     .ts: camelCase
-    .vue: camelCase | PascalCase
-    .d.ts: camelCase
-    .spec.ts: camelCase | PascalCase
-    .mock.ts: camelCase
+  server/**:
+    .js: camelCase
+    .ts: camelCase
+  store/**:
+    .js: camelCase
+    .ts: camelCase
+  # .ts: camelCase
+  # .d.ts: camelCase
+  # .spec.ts: camelCase | PascalCase
+  # .mock.ts: camelCase
