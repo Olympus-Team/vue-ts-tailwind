@@ -2,12 +2,7 @@
   <div class="card text-center">
     <h2 class="card-name">{{ person.fullName }}</h2>
     <img :src="'https://robohash.org/' + person.fullName" />
-    <v-rating
-      v-model="rating"
-      background-color="indigo lighten-3"
-      color="indigo"
-      size="50"
-    ></v-rating>
+    <v-rating v-model="rating" background-color="indigo lighten-3" color="indigo" size="50"></v-rating>
   </div>
 </template>
 
