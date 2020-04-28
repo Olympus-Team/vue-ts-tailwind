@@ -20,7 +20,7 @@ describe('Card', () => {
     Vue.use(Vuetify)
   })
   test('Dont have a created hook', () => {
-    expect(typeof Card.created).toBe('undefined')
+    expect(typeof wrapper.vm.$props.person).toBe('object')
   })
 
   test('is a Vue instance', () => {
