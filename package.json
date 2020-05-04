@@ -31,7 +31,7 @@
     "cross-env": "7.0.2",
     "express": "4.17.1",
     "nuxt": "2.12.2",
-    "nuxt-property-decorator": "2.5.1"
+    "nuxt-property-decorator": "2.7.2"
   },
   "devDependencies": {
     "@ls-lint/ls-lint": "1.8.1",
