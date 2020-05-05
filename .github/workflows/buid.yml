@@ -25,7 +25,7 @@ jobs:
       #run cmd yarn cach dir to print out path 
     - name: Get yarn cache diretory path
       id: yarn-cache-dir
-      run: echo "::set-ouput name=dir::${yarn cache dir}"
+      run: echo "::set-ouput name=dir::$(yarn cache dir)"
       
     - name: Cache dependencies
       id: yarn-cache
