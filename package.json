@@ -8,12 +8,13 @@
     "dev": "cross-env NODE_ENV=development nuxt-ts",
     "build": "nuxt-ts build",
     "start": "cross-env NODE_ENV=production nuxt-ts start",
-    "generate": "yarn lint && nuxt-ts generate",
+    "generate": "yarn lint:eslint && nuxt-ts generate",
     "lint:eslint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:eslint:fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "lint:stylelint": "stylelint --fix",
     "lint:prettier": "prettier --write --loglevel warn",
-    "test": "jest"
+    "test": "jest",
+    "clean-hardsource": "rimraf ./node_modules/.cache/hard-source"
   },
   "engines": {
     "node": ">=10.19.0"
@@ -59,6 +60,7 @@
     "node-sass": "4.14.0",
     "nodemon": "2.0.3",
     "prettier": "2.0.5",
+    "rimraf": "^3.0.2",
     "sass-loader": "8.0.2",
     "stylelint": "13.3.2",
     "stylelint-config-prettier": "8.0.1",
@@ -67,5 +69,9 @@
     "ts-jest": "25.4.0",
     "vue-jest": "4.0.0-beta.2",
     "yorkie": "2.0.0"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "ie >=11"
+  ]
 }
