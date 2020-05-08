@@ -61,6 +61,8 @@ jobs:
       - name: Upload Codecov report
         uses: codecov/codecov-action@v1.0.7
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unit-tests
           name: codecov-build
           file: ./coverage/coverage-final.json
           fail_ci_if_error: true
