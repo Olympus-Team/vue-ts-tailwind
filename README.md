@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Olympus-Team/vue-ts-tailwind/branch/master/graph/badge.svg)](https://codecov.io/gh/Olympus-Team/vue-ts-tailwind)
+
 # vue-ts-tailwind
 
 Chỉ là project nho nhỏ cho zui

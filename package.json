@@ -14,7 +14,8 @@
     "lint:stylelint": "stylelint --fix",
     "lint:prettier": "prettier --write --loglevel warn",
     "test": "jest",
-    "clean-hardsource": "rimraf ./node_modules/.cache/hard-source"
+    "test:ci": "node --expose-gc node_modules/jest/bin/jest --forceExit --bail --colors --logHeapUsage --maxWorkers=2 --ci --no-cache",
+    "clean:sources": "rimraf ./node_modules/.cache/hard-source"
   },
   "engines": {
     "node": ">=10.19.0"
