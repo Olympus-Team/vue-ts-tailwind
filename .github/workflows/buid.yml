@@ -1,45 +1,66 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+name: CI 🔥
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    env:
+      CI: true
+      TERM: xterm-256color
 
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node: [12.x, 11.x, 10.x]
+        exclude:
+          # On Windows, run tests with only the latest environments.
+          - os: windows-latest
+            node: 10.x
+          - os: windows-latest
+            node: 11.x
+          # On macOS, run tests with only the latest environments.
+          - os: macOS-latest
+            node: 10.x
+          - os: macOS-latest
+            node: 11.x
+    runs-on: ${{ matrix.os }}
+
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Setup Node version
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-      #The yarn cache directory will depend on your operating system and version of yarn
-      #run cmd yarn cach dir to print out path 
-    - name: Get yarn cache diretory path
-      id: yarn-cache-dir
-      run: echo "::set-output name=dir::$(yarn cache dir)"
-      
-    - name: Cache dependencies
-      id: yarn-cache
-      # link https://github.com/actions/cache
-      uses: actions/cache@v1
-      with:
-        path: ${{ steps.yarn-cache-dir.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-           ${{ runner.os }}-yarn-
+      - name: Setup Node version
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
 
-    - name: Install packages frozen
-      run: yarn install
-    - name: Run Test case
-      run: yarn test
-      env:
-        CI: true
+      - name: Get yarn cache diretory path
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache dependencies
+        id: yarn-cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install packages
+        run: yarn install
+
+      - name: Run Unit Test
+        run: yarn test:ci
+
+      - name: Upload Codecov report
+        uses: codecov/codecov-action@v1.0.7
+        with:
+          name: codecov-build
+          file: ./coverage/coverage-final.json
+          fail_ci_if_error: true
