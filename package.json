@@ -40,7 +40,7 @@
     "@nuxt/typescript-build": "0.6.5",
     "@nuxtjs/eslint-config-typescript": "1.0.2",
     "@nuxtjs/eslint-module": "1.1.0",
-    "@nuxtjs/stylelint-module": "3.2.2",
+    "@nuxtjs/stylelint-module": "4.0.0",
     "@nuxtjs/tailwindcss": "1.4.1",
     "@nuxtjs/vuetify": "1.11.2",
     "@types/compression": "1.7.0",
