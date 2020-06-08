@@ -41,7 +41,7 @@
     "@nuxtjs/eslint-config-typescript": "1.0.2",
     "@nuxtjs/eslint-module": "2.0.0",
     "@nuxtjs/stylelint-module": "4.0.0",
-    "@nuxtjs/tailwindcss": "1.4.1",
+    "@nuxtjs/tailwindcss": "2.0.0",
     "@nuxtjs/vuetify": "1.11.2",
     "@types/compression": "1.7.0",
     "@types/jest": "^25.2.1",
