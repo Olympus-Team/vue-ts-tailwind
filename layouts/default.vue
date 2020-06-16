@@ -1,8 +1,21 @@
 <template>
   <v-app>
     <nuxt />
+    <Snackbar />
   </v-app>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+import Snackbar from '@/components/commons/Snackbar/index.vue'
+
+@Component({
+  components: {
+    Snackbar
+  }
+})
+export default class extends Vue {}
+</script>
 
 <style>
 html {
