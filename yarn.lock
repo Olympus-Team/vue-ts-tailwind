@@ -1295,30 +1295,6 @@
     serve-static "^1.14.1"
     server-destroy "^1.0.1"
 
-"@nuxt/types@0.7.8":
-  version "0.7.8"
-  resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-0.7.8.tgz#0d5ae4b6b12c7764c98588a66a603698f1ad9114"
-  integrity sha512-6N7CnrZS71nmrGO7MFTIJz+wMpTy7k5Vopm1ha4eJRmr2pdTUjUxTfaYLgAZDRBlpJ9+qIhjhJPILJEv1qGIOQ==
-  dependencies:
-    "@types/autoprefixer" "^9.7.2"
-    "@types/babel__core" "^7.1.8"
-    "@types/compression" "^1.7.0"
-    "@types/connect" "^3.4.33"
-    "@types/etag" "^1.8.0"
-    "@types/file-loader" "^4.2.0"
-    "@types/html-minifier" "^3.5.3"
-    "@types/less" "^3.0.1"
-    "@types/node" "^12.12.44"
-    "@types/node-sass" "^4.11.1"
-    "@types/optimize-css-assets-webpack-plugin" "^5.0.1"
-    "@types/pug" "^2.0.4"
-    "@types/serve-static" "^1.13.4"
-    "@types/terser-webpack-plugin" "^2.2.1"
-    "@types/webpack" "^4.41.17"
-    "@types/webpack-bundle-analyzer" "^3.8.0"
-    "@types/webpack-dev-middleware" "^3.7.1"
-    "@types/webpack-hot-middleware" "^2.25.3"
-
 "@nuxt/types@0.7.9":
   version "0.7.9"
   resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-0.7.9.tgz#a6bc6911672a812063cbb17726304cb536f58a3d"
@@ -1354,12 +1330,12 @@
     ts-loader "^7.0.5"
     typescript "~3.8"
 
-"@nuxt/typescript-runtime@0.4.9":
-  version "0.4.9"
-  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-0.4.9.tgz#05b9d0368a4d37d618d1cae3ada69f886efa1bbd"
-  integrity sha512-6OdpZ56X71cdE+AKMG2h75v3kdGpuiQDEMKSSS6OCL75+uIZ4Z3spJaYODOHQWq+4aTpOfls4dQDFqbO1NwdPw==
+"@nuxt/typescript-runtime@0.4.10":
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-0.4.10.tgz#83480c476eb1a503ea82543930f4754b6fb9e9a9"
+  integrity sha512-IxRXl/MeWCiotnj9CV+KNTZEUcOt1J+2pcDgeZtJ5jZwGMAmJad4khj6sQsq8uV28WPvio1+LoIlhBHZ4CAcvw==
   dependencies:
-    "@nuxt/types" "0.7.8"
+    "@nuxt/types" "0.7.9"
     ts-node "^8.10.2"
     typescript "~3.8"
 
@@ -1815,11 +1791,6 @@
   version "13.13.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.0.tgz#30d2d09f623fe32cde9cb582c7a6eda2788ce4a8"
   integrity sha512-WE4IOAC6r/yBZss1oQGM5zs2D7RuKR6Q+w+X2SouPofnWn+LbCqClRyhO3ZE7Ix8nmFgo/oVuuE01cJT2XB13A==
-
-"@types/node@^12.12.44":
-  version "12.12.44"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.44.tgz#0d400a1453adcb359b133acceae4dd8bb0e0a159"
-  integrity sha512-jM6QVv0Sm5d3nW+nUD5jSzPcO6oPqboitSNcwgBay9hifVq/Rauq1PYnROnsmuw45JMBiTnsPAno0bKu2e2xrg==
 
 "@types/node@^12.12.47":
   version "12.12.47"
@@ -3853,7 +3824,7 @@ connect@^3.7.0:
     parseurl "~1.3.3"
     utils-merge "1.0.1"
 
-consola@^2.10.0, consola@^2.10.1, consola@^2.11.3, consola@^2.12.1, consola@^2.13.0, consola@^2.5.6, consola@^2.6.0, consola@^2.9.0:
+consola@^2.10.0, consola@^2.10.1, consola@^2.11.3, consola@^2.12.1, consola@^2.13.0, consola@^2.6.0, consola@^2.9.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.13.0.tgz#5a4dc75e1b1fddbd8b10728e7790a2e54efeeeb7"
   integrity sha512-Jw+8qpL0yrpfqH9m90fWoDRQyn8TYU6Aegpl4UofoP81VYvQLoOWMpFw2vQ3U/cyLRRzTc/CyNC6YYVzZFU8Eg==
