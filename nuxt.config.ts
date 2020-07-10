@@ -102,7 +102,7 @@ const config: Configuration = {
     /*
      ** You can extend webpack config here
      */
-    extractCSS: true,
+    extractCSS: { ignoreOrder: true },
     extend(config: WebpackConfiguration, ctx) {},
     // Config for Nuxt Property Decorator
     babel: {

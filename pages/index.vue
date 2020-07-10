@@ -1,6 +1,7 @@
 <template>
   <section>
     <h1 class="header">Nuxt TypeScript Starter</h1>
+    <nuxt-link to="/bookshop">Go to BookShop</nuxt-link>
     <div class="cards">
       <Card v-for="person in people" :key="person.id" :person="person"></Card>
     </div>
